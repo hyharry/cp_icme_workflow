@@ -1,0 +1,43 @@
+homogenization:
+  SX:
+    N_constituents: 1
+    mechanical: {type: pass}
+phase:
+  Aluminium:
+    lattice: cF
+    mechanical:
+      output: [F, P, F_e, L_p, O]
+      elastic: {type: Hooke, C_11: 106900000000.0, C_12: 60500000000.0, C_44: 28400000000.0}
+      plastic:
+        type: phenopowerlaw
+        references: ['W.F. Hosford et al., Acta Metallurgica 8(3):187-199, 1960, https://doi.org/10.1016/0001-6160(60)90127-9, fitted to Fig. 5 ([111] and [001])']
+        output: [xi_sl, gamma_sl]
+        N_sl: [12]
+        dot_gamma_0_sl: [7.5e-05]
+        n_sl: [20]
+        a_sl: [5.4]
+        xi_0_sl: [2690000.0]
+        xi_inf_sl: [67500000.0]
+        h_0_sl-sl: [281500000.0]
+        h_sl-sl: [1, 1, 5.123, 0.574, 1.123, 1.123, 1]
+material:
+- constituents:
+  - phase: Aluminium
+    O: [0.25871292185989514, -0.4756404006704889, 0.521873829069511, -0.659152137101185]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.18870940482218246, -0.056711302139993175, -0.20234832496198632, 0.9592850171488776]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.8228255291740793, 0.38175857848256206, 0.10032215877401172, 0.4088447147185492]
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Aluminium
+    O: [0.01610272860626628, 0.27502090657958306, -0.8813842128388243, 0.38375261879766165]
+    v: 1.0
+  homogenization: SX

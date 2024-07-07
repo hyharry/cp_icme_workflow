@@ -1,0 +1,2 @@
+# DAMASK simulation guide and practice
+DAMASK (The Düsseldorf Advanced Material Simulation Kit) is a powerful [open-source code](https://github.com/damask-multiphysics/DAMASK) created at MPIE (Max-Planck-Institut für Eisenforschung GmbH, now Max-Planck-Institut für Nachhaltige Materialien GmbH)
